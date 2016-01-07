@@ -1,27 +1,28 @@
 var express = require('express'),
-  app = express(),
-  engines = require('consolidate');
-bodyParser = require('body-parser');
+  app = express();
+//   engines = require('consolidate');
+// bodyParser = require('body-parser');
 
-app.engine('html', engines.nunjucks);
-app.set('view engine', 'html');
+// app.engine('html', engines.nunjucks);
+// app.set('view engine', 'html');
 app.set('port', (process.env.PORT || 5000));
-app.set('views', __dirname + '/views');
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-app.use(express.static('public'));
+// app.set('views', __dirname + '/views');
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
 
-function errorHandler(err, req, res, next) {
-  console.log(err.message);
-  console.log(err.stack);
-  res.status(500).render('error_template', {
-    error: err
-  });
-}
+// app.use(express.static('public'));
+
+// function errorHandler(err, req, res, next) {
+//   console.log(err.message);
+//   console.log(err.stack);
+//   res.status(500).render('error_template', {
+//     error: err
+//   });
+// }
 
 app.get('/', function(req, res, next) {
-  res.write("Hello");
+  res.send("Hello. This is Heroku, running node.");
 });
 
 
@@ -37,6 +38,11 @@ app.get('/', function(req, res, next) {
 //   res.render('portfolio', {
 //     links: links
 //   });
+// });
+
+
+// app.listen(app.get('port'), function() {
+//   console.log('Node app is running on port', app.get('port'));
 // });
 
 var server = app.listen(app.get('port'), function() {
