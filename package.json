@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio-in-node",
   "version": "0.0.1",
-  "main": "app.js",
+  "main": "mapp.js",
   "dependencies": {
     "express": "latest",
     "mongodb": "latest",
