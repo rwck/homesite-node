@@ -21,11 +21,6 @@ function errorHandler(err, req, res, next) {
   });
 }
 
-app.get('/', function(req, res, next) {
-  res.send("Hello. This is Heroku, running node.");
-});
-
-
 app.get('/:var(|home)?', function(req, res, next) {
   var links = ["Portfolio", "Bio", "Contact"];
   res.render('index', {
