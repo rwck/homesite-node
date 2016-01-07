@@ -1,7 +1,7 @@
 var express = require('express'),
-  app = express();
-  engines = require('consolidate');
-bodyParser = require('body-parser');
+  app = express(),
+  engines = require('consolidate'),
+  bodyParser = require('body-parser');
 
 app.engine('html', engines.nunjucks);
 app.set('view engine', 'html');
