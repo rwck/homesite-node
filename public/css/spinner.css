@@ -1,0 +1,71 @@
+.spinner {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.59);
+  /*margin: 20px;
+  width: 100px;
+  height: 100px;
+  background: #f00;*/
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-ms-keyframes spin {
+  from {
+    transform: rotate(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    transform: rotate(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    transform: rotateZ(360deg);
+  }
+}

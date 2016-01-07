@@ -1,0 +1,209 @@
+{% extends "views/parent.html" %} {% block main %}
+
+<div class="section group">
+  <div class="box col span_4_of_12">
+    <hr>
+    <p><a href="#arduino">Arduino Light Sensor</a></p>
+
+    <ul>
+      <li>Arduino</li>
+      <li>Sinatra</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <a href="https://shrouded-cliffs-5129.herokuapp.com
+" target="_blank">Site</a> | <a href="https://github.com/rwck/websocket">Code</a>
+    <hr>
+
+    <p>
+      <p><a href="#safe-landing">Safe Landing</a></p>
+
+      <ul>
+        <li>Ruby on Rails
+          <li>Backbone
+          </li>
+      </ul>
+      <a href="https://immense-ridge-7014.herokuapp.com" target="_blank">Site</a> | <a href="https://github.com/rwck/expat" target="_blank">Code</a>
+    </p>
+    <hr>
+    <p>
+      <p><a href="fmea-tool">FMEA tool</a></p>
+
+
+      <ul>
+        <li>Ruby on Rails</li>
+      </ul>
+      <a href="https://polar-ridge-7265.herokuapp.com/" target="_blank">Site</a> | <a href="https://github.com/rwck/week_06/tree/master/first_go/fmea_v_1" target="_blank">Code</a>
+    </p>
+    <hr>
+    <p>
+      <a href="#jothello">JOthello</a>
+      <ul>
+        <li>JavaScript</li>
+      </ul>
+      <a href="http://rwck.github.io/" target="_blank">Site</a> | <a href="https://github.com/rwck/fixing_project_one" target="_blank">Code</a>
+
+    </p>
+
+    <hr>
+
+    <p>
+      <a href="#this-site">This site</a>
+      <ul>
+        <li>Sinatra</li>
+        <li>JavaScript</li>
+      </ul>
+      <a href="/" target="_blank">Site</a> | <a href="https://github.com/rwck/homesite" target="_blank">Code</a>
+    </p>
+
+    <hr>
+    <span class="devicons devicons-javascript"></span>
+    <span class="devicons devicons-ruby_on_rails"></span>
+    <span class="devicons devicons-ruby_rough"></span>
+    <span class="devicons devicons-backbone"></span>
+    <span class="devicons devicons-sass"></span>
+    <span class="devicons devicons-html5"></span>
+    <span class="devicons devicons-postgresql"></span>
+    <span class="devicons devicons-linux"></span>
+    </ul>
+  </div>
+
+  <div class="box col span_8_of_12">
+    <div class="rollover-expat">
+      Here is some text.
+    </div>
+    <div>
+      <h3 id="arduino">Arduino Light Sensor</h3>
+      <p>
+
+        I still can't get over the fact that you can start with a really simple signal and do a whole bunch of things based on what that signal says.
+      </p>
+
+      <p>
+        This project uses an Arduino to get a value from a light sensor. The Arduino sends that value to a simple server running on a laptop. Using websockets and a publish / subscribe approach, the server sends the signal to a Sinatra web app hosted on heroku.
+      </p>
+
+
+      <p>
+        The upshot is that the website shows (in realtime) the value on the light sensor.
+        <p>
+          Cool.
+        </p>
+
+        <p>
+
+          Or at least, I think so. This is just a tiny insight into what is possible, and I'm actively developing additional functionality.
+        </p>
+
+
+    </div>
+    <hr>
+
+    <div>
+
+      <h3 id="safe-landing">Safe Landing</h3>
+
+      <p>
+
+        This was a joint project with fellow General Assembly student <a href="#">Daisy Kesavan</a>.
+      </p>
+      <p>
+        Both expats, we decided to build something that would have helped us at the time we moved to Australia.
+      </p>
+      <p>
+        This app uses three APIs to provide a single view of information people could find useful when considering a move.
+      </p>
+      <ul>
+        <li>A map of the place you searched</li>
+        <li>Some pictures from Flickr from the place you searched</li>
+        <li>The details of some meetups held in the place you searched</li>
+      </ul>
+      <p>
+        This is a Rails app with a Backbone front end.
+      </p>
+      <p>
+        There is significant scope for extra features - the main functionality I'm currently looking to add is a 'Find a Friend' feature that will allow users to search for other users with shared interests.
+      </p>
+
+      <hr>
+
+
+
+
+      <div>
+
+        <h3 id="fmea">FMEA</h3>
+        <p>
+          When I was working in recruitment I had a lot of clients who were doing process improvement projects.
+        </p>
+        <p>
+          One of the key methodologies they use for this is called Lean. And one of the most useful tools from this toolset is called FMEA, or Failure Mode and Effects Analysis.
+        </p>
+        <p>
+          FMEA is basically a structured approach to helping people and organisations to prioritise the projects they have to do.
+        </p>
+        <p>
+          I haven't yet found a decent online tool to help people to do this, so I decided to build one.
+        </p>
+
+      </div>
+      <hr>
+
+      <div>
+        <h3 id="jothello">JOthello</h3>
+        <p>
+          This was the first project I did on the General Assembly Boot Camp.
+        </p>
+        <p>
+          We spent a couple of weeks learning JavaScript and then we were told to go away and make a game.
+        </p>
+        <p>
+          This is Othello in JavaScript.
+        </p>
+
+      </div>
+      <hr>
+
+      <div>
+        <h3 id="this-site">This site</h3>
+        <p>
+          This is a little Sinatra app I coded with quill and parchment.
+        </p>
+        <p>
+          All the design and photography is my own.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section group">
+  <div class="box col span_6_of_12"></div>
+
+  <div class="box col span_6_of_12">
+    <div class="footer">
+      <a href="https://github.com/rwck" target="_blank">
+        <span class="my_fontawesome">&#xf092</span>
+
+      </a>
+
+      <a href="https://au.linkedin.com/in/donaldrwade
+  " target="_blank">
+        <span class="my_fontawesome">&#xf08c</span>
+
+      </a>
+
+      <a href="https://twitter.com/donaldrwade" target="_blank">
+        <span class="my_fontawesome">&#xf081</span>
+
+      </a>
+      <a href="mailto:rwckdw@gmail.com?subject=WebContact:">
+        <span class="my_fontawesome">&#xf0e0</span>
+
+      </a>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

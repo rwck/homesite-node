@@ -1,0 +1,122 @@
+/***************************
+
+  Header and navigation
+
+***************************/
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(44, 44, 44, 1);
+  z-index: 1000;
+}
+nav ul li {
+  list-stlye: none;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0 0.5em;
+  border-bottom: 3px solid #fff;
+}
+nav ul li:hover {
+  border-bottom: 3px solid rgb(74, 194, 190);
+}
+
+/***************************
+
+  Mobile menu
+
+***************************/
+
+.mobile-menu {
+  position: fixed;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  background: rgba(44, 44, 44, 1);
+  display: none;
+  z-index: 150;
+}
+.mobile-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.mobile-menu li {
+  list-style: none;
+  padding: 0.5em 1em;
+  margin: 0.5em 1em;
+}
+.mobile-menu li:hover {
+  background: rgba(66, 66, 66, 0.5);
+}
+.mobile-menu a:hover {
+  color: inherit;
+}
+.mobile-link {
+  border-left: 3px solid rgb(255, 255, 255);
+}
+.menu-highlight {
+  border-color: rgb(74, 194, 190);
+}
+
+/***************************
+
+  Mobile menu-cross toggle
+
+***************************/
+
+#toggle-menu {
+  width: 15px;
+  height: 15px;
+  padding: 20px;
+  cursor: pointer;
+}
+#toggle-menu div {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  padding: 0 15px 15px;
+  margin-top: 15px;
+}
+#toggle-menu span {
+  display: block;
+  width: 15px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.25s ease-in-out 0.5s;
+  -moz-transition: -moz-transform 0.5s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.25s ease-in-out 0.5s;
+  transition: transform 0.5s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.25s ease-in-out 0.5s;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  transform-origin: center;
+}
+#toggle-menu span.top {
+  top: 0px;
+}
+#toggle-menu span.middle {
+  top: 6px;
+}
+#toggle-menu span.bottom {
+  top: 12px;
+}
+#toggle-menu.menu-is-active span {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out 0.3s, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  -moz-transition: -moz-transform 0.5s ease-in-out 0.3s, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition: transform 0.5s ease-in-out 0.3s, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+#toggle-menu.menu-is-active span.top, #toggle-menu.menu-is-active span.middle {
+  top: 6px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+#toggle-menu.menu-is-active span.middle {
+  opacity: 0;
+}
+#toggle-menu.menu-is-active span.bottom {
+  top: 6px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  transform: rotate(225deg);
+}

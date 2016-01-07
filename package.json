@@ -1,0 +1,14 @@
+{
+  "name": "my_portfolio",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "express": "latest",
+    "mongodb": "latest",
+    "nunjucks": "latest",
+    "body-parser": "latest",
+    "consolidate": "latest"
+  },
+  "author": "Donald Wade",
+  "licence": "BSD"
+}

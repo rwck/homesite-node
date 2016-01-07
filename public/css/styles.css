@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  /*border: 1px dotted pink;*/
+}
+html {
+}
+.blur {
+  background-size: cover;
+  -webkit-filter: blur(13px);
+  -moz-filter: blur(13px);
+  -o-filter: blur(13px);
+  -ms-filter: blur(13px);
+  filter: blur(13px);
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding-top: 1rem;
+}
+p, li {
+  /*font-size: small;*/
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 120%;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 120%;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: inherit;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 0.75rem;
+  /*padding-bottom: 1rem;*/
+}
+
+.everything {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+div {
+  transition: blur 2s;
+}
+
+.bio-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: url("/images/bwopera4.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+  opacity: 0.1;
+}
+
+.portfolio-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: url("/images/bwopera_2.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+  opacity: 0.3;
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: url("/images/bwopera_edit.jpg") no-repeat center;
+  opacity: 0.5;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+
+}
+
+.rollover-expat {
+  display: none;
+}
+
+.blur-box {
+  opacity: 0;
+  transition: opacity 5s;
+}
+
+.main-container {
+  margin: 2rem auto;
+  max-width: 90%;
+}
+
+.nav-bar {
+  margin: 0 auto;
+  max-width: 50%;
+  min-height: 20px;
+}
+.links {}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0 0.2rem;
+}
+
+.footer {
+  text-align: center;
+  transition: position ease-in 2s, background-color ease-in 3s;
+}
+
+.footer .fa {
+  padding: 0.5rem;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer a:hover {
+  color: rgb(235, 235, 235);
+  text-decoration: none;
+}
+
+.heading {
+  position: relative;
+  width: 100%;
+  margin: 0.5rem auto;
+}
+.contents-box {
+  background-color: #fafafa;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 4px 4px 12px 1px rgba(131, 139, 139, 1);
+}
+.my-image img {
+  border: 1px solid black;
+  width: 100%;
+  padding: 1rem;
+}
+.map {
+  width: 50%;
+  padding: 1rem;
+}
+.picture {
+  margin: auto;
+  text-align: center;
+  object-fit: cover;
+  padding: 1rem;
+}
+.box {
+  display: none;
+  padding: 1rem;
+}
+
+.my_fontawesome {
+  font-family: FontAwesome;
+  line-height: 120%;
+  font-size: 50px;
+  margin: 0.5rem;
+  transition: font-size 4s;
+}
+
+.contact-click {
+  font-size: 150px;
+}
+
+.my-devicon-class {
+  font-family: devicons;
+}
+
+.expanded-footer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px dotted black;
+  transition: position ease-in 0s, background-color ease-in 2s;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .contact-click {
+    font-size: 3rem;
+  }
+  .expanded-footer {
+    position: fixed;
+  }
+}

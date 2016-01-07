@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Merriweather:400,700|Josefin+Sans:400' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="responsive-nav.js-master/responsive-nav.css">
+  <link rel="stylesheet" href="/devicons-master/css/devicons.min.css">
+
+
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/col.css">
+  <link rel="stylesheet" href="css/12cols.css">
+  <link rel="stylesheet" href="css/3cols.css">
+
+  <title>Donald Wade</title>
+</head>
+
+
+<body>
+  <div class="everything">
+    <div class="background-container"></div>
+    <div class="main-container">
+      <div class="heading">
+
+        <h1>Donald Wade</h1>
+
+      </div>
+
+      <nav class="nav-bar">
+
+
+        <span class="links">
+
+          <ul>
+            {% for link in links %}
+
+            <li>
+              <a href={{link.toLowerCase()}} id={{link.toLowerCase()}}>{{link}}
+              </a>
+            </li>
+
+            {% endfor %}
+        </span>
+        </ul>
+
+      </nav>
+
+      <h2>Innovate
+        <i class="fa fa-chevron-right"></i> Design
+        <i class="fa fa-chevron-right"></i> Build
+        <i class="fa fa-chevron-right"></i> Market
+        <i class="fa fa-chevron-right"></i> Monetise
+      </h2>
+
+{% block main %} {% endblock %} {% block footer %}
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+      <script type="text/javascript" src="/js/jquery-ui/jquery-ui.min.js">
+      </script>
+      <script src="/js/underscore/underscore-min.js"></script>
+
+      <script src="/js/backbone/backbone-min.js"></script>
+      <script src="/js/interests.js"></script>
+      <script src="/js/main.js"></script>
+
+      <script>
+        var test = setInterval(function() {
+          Interests.playInterests(interests);
+        }, 750);
+      </script>
+
+</html>
+
+{% endblock %}
