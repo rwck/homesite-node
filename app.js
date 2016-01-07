@@ -23,7 +23,12 @@ function errorHandler(err, req, res, next) {
 var MongoClient = require('mongodb').MongoClient,
   assert = require('assert');
 
-MongoClient.connect("mongodb://localhost:27017/homesite", function(err, db) {
+
+// home: mongodb://localhost:27017/homesite
+
+// heroku: mongodb://<dbuser>:<dbpassword>@ds039155.mongolab.com:39155/heroku_vcdcg3t9
+
+MongoClient.connect("mongodb://<dbuser>:<dbpassword>@ds039155.mongolab.com:39155/heroku_vcdcg3t9", function(err, db) {
   assert.equal(null, err, function() {
     console.log("There has been an error with the database", err.message);
   });
