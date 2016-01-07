@@ -28,7 +28,7 @@ var MongoClient = require('mongodb').MongoClient,
 
 // heroku: mongodb://<dbuser>:<dbpassword>@ds039155.mongolab.com:39155/heroku_vcdcg3t9
 
-MongoClient.connect("mongodb://<dbuser>:<dbpassword>@ds039155.mongolab.com:39155/heroku_vcdcg3t9", function(err, db) {
+MongoClient.connect(MONGOLAB_URI, function(err, db) {
   assert.equal(null, err, function() {
     console.log("There has been an error with the database", err.message);
   });
