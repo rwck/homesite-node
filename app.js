@@ -5,6 +5,7 @@ bodyParser = require('body-parser');
 
 app.engine('html', engines.nunjucks);
 app.set('view engine', 'html');
+app.set('port', (process.env.PORT || 5000));
 app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({
   extended: true
@@ -38,7 +39,7 @@ app.get('/', function(req, res, next) {
 //   });
 // });
 
-var server = app.listen(3333, function() {
+var server = app.listen(app.get('port'), function() {
   var port = server.address().port;
   console.log("Express is setup and listening on %s", port);
 });
