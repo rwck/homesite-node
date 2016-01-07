@@ -35,7 +35,6 @@ app.get('/portfolio', function(req, res, next) {
 });
 
 var server = app.listen(3333, function() {
-var port = server.address().port;
-console.log("Express is setup and listening on %s", port);
-});
+  var port = server.address().port;
+  console.log("Express is setup and listening on %s", port);
 });
