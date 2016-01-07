@@ -19,20 +19,24 @@ function errorHandler(err, req, res, next) {
   });
 }
 
-
-app.get('/:var(|home)?', function(req, res, next) {
-  var links = ["Portfolio", "Bio", "Contact"];
-  res.render('index', {
-    links: links
-  });
+app.get('/', function(req, res, next) {
+  res.write("Hello");
 });
 
-app.get('/portfolio', function(req, res, next) {
-  var links = ["Home", "Bio", "Contact"];
-  res.render('portfolio', {
-    links: links
-  });
-});
+
+// app.get('/:var(|home)?', function(req, res, next) {
+//   var links = ["Portfolio", "Bio", "Contact"];
+//   res.render('index', {
+//     links: links
+//   });
+// });
+//
+// app.get('/portfolio', function(req, res, next) {
+//   var links = ["Home", "Bio", "Contact"];
+//   res.render('portfolio', {
+//     links: links
+//   });
+// });
 
 var server = app.listen(3333, function() {
   var port = server.address().port;
