@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "main": "app.js",
   "engines": {
-    "node": "~5.4.0",
+    "node": "~5.4.0"
   "scripts": {
-     "start": "node app.js",
+     "start": "node app.js"
   },
   "dependencies": {
     "express": "latest",
