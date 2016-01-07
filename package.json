@@ -1,7 +1,11 @@
 {
   "name": "my-portfolio-in-node",
   "version": "0.0.1",
-  "main": "mapp.js",
+  "description": "A sample Node.js app using Express 4",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "express": "latest",
     "mongodb": "latest",
@@ -9,6 +13,17 @@
     "body-parser": "latest",
     "consolidate": "latest"
   },
-  "author": "Donald Wade",
-  "licence": "BSD"
+  "engines": {
+    "node": "5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rwck/homesite-node"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
