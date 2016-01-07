@@ -1,7 +1,12 @@
 {
-  "name": "my_portfolio",
+  "name": "my-portfolio-in-node",
   "version": "0.0.1",
   "main": "app.js",
+  "engines": {
+    "node": "~5.4.0",
+  "scripts": {
+     "start": "node app.js",
+  },
   "dependencies": {
     "express": "latest",
     "mongodb": "latest",
@@ -10,5 +15,5 @@
     "consolidate": "latest"
   },
   "author": "Donald Wade",
-  "licence": "BSD"
+  "licence": "BSD",
 }
