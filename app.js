@@ -42,6 +42,13 @@ MongoClient.connect(process.env.MONGOLAB_URI || "mongodb://localhost:27017/chall
     });
   });
 
+  app.get('/bio', function(req, res, next) {
+    var links = ["Home", "Portfolio", "Contact"];
+    res.render('bio', {
+      links: links
+    });
+  });
+
   var server = app.listen(app.get('port'), function() {
     var port = server.address().port;
     console.log("Express is setup and listening on %s", port);
