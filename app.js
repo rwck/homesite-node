@@ -1,3 +1,5 @@
+// Set up express server
+
 var express = require('express'),
   app = express(),
   engines = require('consolidate'),
@@ -12,6 +14,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('public'));
 
+// Set up error handler
+
 function errorHandler(err, req, res, next) {
   console.log(err.message);
   console.log(err.stack);
@@ -20,6 +24,8 @@ function errorHandler(err, req, res, next) {
   });
 }
 
+// Get in touch with MongoDB Server -- express connection happens inside the context of that connection
+
 var MongoClient = require('mongodb').MongoClient,
   assert = require('assert');
 
@@ -27,6 +33,8 @@ MongoClient.connect(process.env.MONGOLAB_URI || "mongodb://localhost:27017/chall
   assert.equal(null, err, function() {
     console.log("There has been a problem connecting to the database");
   });
+
+  // either '/' or '/home' end point will run the same code
 
   app.get('/:var(|home)?', function(req, res, next) {
     var links = ["Portfolio", "Bio", "Contact"];
@@ -48,6 +56,8 @@ MongoClient.connect(process.env.MONGOLAB_URI || "mongodb://localhost:27017/chall
       links: links
     });
   });
+
+  // Launch express server
 
   var server = app.listen(app.get('port'), function() {
     var port = server.address().port;

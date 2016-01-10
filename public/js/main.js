@@ -7,24 +7,25 @@ var Interests = {
   playInterests: function(interestsArray) {
     if (this.index === 0) {
       this.array = this.shuffle(interestsArray);
-    } else {
+    }
+    else {
       this.array = this.array;
     }
-    // console.log(this.index);
-    // console.log(this.array[this.index]);
+
     if (this.array !== null) {
       this.index = (this.index + 1) % this.array.length;
-      // console.log("index is", this.index);
       $(".interests").html("<p>" + this.array[this.index] + "</p>");
     }
+
   },
 
+  // Shuffle the contents of the array
   shuffle: function(array) {
+
     if (array !== null) {
       var currentIndex = array.length,
         temporaryValue, randomIndex;
 
-      // While there remain elements to shuffle...
       while (0 !== currentIndex) {
 
         // Pick a remaining element...
@@ -40,18 +41,17 @@ var Interests = {
     }
 
     return array;
+
   }
 }
 
 function deblur() {
   $(".content-box").mouseenter(function() {
     var element = this.id;
-    // console.log(element);
     $(this).toggleClass("blur-box");
   });
   $(".content-box").mouseleave(function() {
     var element = this.id;
-    // console.log(element);
     $(this).toggleClass("blur-box");
   })
 }
@@ -65,20 +65,8 @@ function getRid() {
   }, 7000);
 }
 
-function contactClick() {
-  $('.footer').click(function() {
-    // event.target.addClass("contact-click");
-    console.log(event.target);
-    console.log(event.relatedTarget);
-    console.log(event.pageX);
-    assert.deepEqual(actual, expected);
-    console.log(event.pageY);
-    console.log(event.which);
-    console.log(event.metaKey);
-    // $(event.target).addClass('contact-class');
-  });
-}
 
+// Add event listener for contact link
 function putContactClicker() {
   $("#contact").click(function() {
     event.preventDefault();
@@ -86,15 +74,17 @@ function putContactClicker() {
   });
 }
 
+
+// grow contact menu
 function expandFooter() {
-  // $('.background-container').text("");
-  // $('.bio-container').text("");
   $('.footer').addClass("expanded-footer", function() {
     everythingBut();
   });
   $('.my_fontawesome').addClass("contact-click");
 };
 
+
+// remove contact menu growth on click anywhere else
 function everythingOff() {
   $(".everything:not(.footer)").off();
 }
